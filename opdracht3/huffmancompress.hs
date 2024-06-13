@@ -5,10 +5,6 @@ import System.Environment
 import Data.Functor
 import Control.Applicative
 
--- | Example string to demonstrate Huffman encoding.
-example :: String
-example = "aaabbcbbcccddccbbcccdecccaaaaabbbb"
-
 -- | Step 1 of Huffman encoding: Count the frequency of each character in the string.
 -- The result is a list of tuples (frequency, character), sorted in descending order of frequency.
 huffmanStap1 :: String -> [(Int, Char)]
