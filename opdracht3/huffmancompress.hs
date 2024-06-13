@@ -5,7 +5,7 @@ import System.Environment
 import Data.Functor
 import Control.Applicative
 
--- | Example string to demonstrate Huffman encoding. Hey
+-- | Example string to demonstrate Huffman encoding.
 example :: String
 example = "aaabbcbbcccddccbbcccdecccaaaaabbbb"
 
