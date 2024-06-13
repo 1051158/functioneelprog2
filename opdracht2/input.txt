@@ -1,0 +1,3 @@
+Alice 30
+Bob 40
+Eve 50

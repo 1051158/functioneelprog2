@@ -1,0 +1,1 @@
+Branch 65 (Branch 51 (Branch 48 Empty (Branch 48 Empty (Branch 48 Empty Empty))) (Branch 52 Empty (Branch 53 Empty Empty))) (Branch 108 (Branch 105 (Branch 99 (Branch 66 Empty (Branch 98 (Branch 69 Empty Empty) Empty)) (Branch 101 Empty (Branch 101 Empty Empty))) Empty) (Branch 111 Empty (Branch 118 Empty Empty)))

@@ -62,8 +62,11 @@ main = do
   -- | Read the content of the source file.
   filecontent <- readFile sourcefile
   
-  -- | Insert the file content into the binary tree.
-  let tree = pushlist Empty filecontent
+  -- | Filter out all whitespace characters.
+  let filteredContent = filter (not . isSpace) filecontent
+  
+  -- | Insert the filtered file content into the binary tree.
+  let tree = pushlist Empty filteredContent
 
   -- | Convert the tree elements to their integer ASCII values.
   let intTree = maptree ord tree
@@ -89,9 +92,10 @@ main = do
   putStrLn "done"
 
 -- Explanation:
--- This Haskell program reads a string from a file, processes it into a binary tree,
--- performs various operations on the tree, and writes/reads the tree to/from a file.
--- Finally, it prints the inorder traversal of the tree and the filtered tree containing only digits.
+-- This Haskell program reads a string from a file, filters out whitespace characters,
+-- processes the filtered string into a binary tree, performs various operations on the tree,
+-- and writes/reads the tree to/from a file. Finally, it prints the inorder traversal of the tree
+-- and the filtered tree containing only digits.
 
 -- Data Structure:
 -- - 'Bintree' is a binary tree that can be empty or a branch with a value and two subtrees.
@@ -108,11 +112,12 @@ main = do
 -- Main Function:
 -- 1. Get the source file name from command-line arguments.
 -- 2. Read the content of the source file.
--- 3. Insert the file content into the binary tree.
--- 4. Convert the tree elements to their integer ASCII values.
--- 5. Write the integer tree to a file.
--- 6. Read the integer tree from the file.
--- 7. Convert the integer tree back to characters.
--- 8. Perform an inorder traversal of the character tree and print the result.
--- 9. Filter the tree to include only digit characters and print the result.
--- 10. Print "done" to indicate completion.
+-- 3. Filter out whitespace characters.
+-- 4. Insert the filtered file content into the binary tree.
+-- 5. Convert the tree elements to their integer ASCII values.
+-- 6. Write the integer tree to a file.
+-- 7. Read the integer tree from the file.
+-- 8. Convert the integer tree back to characters.
+-- 9. Perform an inorder traversal of the character tree and print the result.
+-- 10. Filter the tree to include only digit characters and print the result.
+-- 11. Print "done" to indicate completion.
