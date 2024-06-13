@@ -1,10 +1,3 @@
-{--
-    huffmandecompress.hs
-    TINPRO01-8 (Functional programming 2)
-    Sep van der Biezen, Thijs Dregmans 
-    Last edited: 2023-05-23
---}
-
 module Main where
 
 import System.Environment
@@ -24,7 +17,6 @@ decompress :: Codetree a -> [Char] -> [Char]
 decompress _ [] = []
 decompress tree bitString = fst tuple : decompress tree (snd tuple)
   where tuple = split tree bitString
-  -- tuple is the (first char, [rest of the bitsco]) 
 
 
 main = do [sourcefile, targetfile, codetreefile] <- getArgs
@@ -37,7 +29,6 @@ main = do [sourcefile, targetfile, codetreefile] <- getArgs
 
           let lenUncompressed = length uncompressedContent
 
-          -- Note: Assumption: 1 byte is 8 bits.
           putStrLn $ "length of decompressed file: " ++ show lenUncompressed ++ " characters, " ++ show (lenUncompressed  * 8) ++ " bits."
           
           writeFile targetfile uncompressedContent
